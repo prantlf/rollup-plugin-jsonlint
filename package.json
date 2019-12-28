@@ -1,0 +1,94 @@
+{
+  "name": "rollup-plugin-jsonlint",
+  "version": "0.0.1",
+  "description": "Converts .json (JSON/CJSON/JSON5) files to ES6 modules.",
+  "author": "Ferdinand Prantl <prantlf@gmail.com> (http://prantl.tk)",
+  "license": "MIT",
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/prantlf/rollup-plugin-jsonlint/blob/master/LICENSE"
+    }
+  ],
+  "homepage": "http://prantlf.github.com/rollup-plugin-jsonlint/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/prantlf/rollup-plugin-jsonlint.git"
+  },
+  "bugs": {
+    "url": "http://github.com/prantlf/rollup-plugin-jsonlint/issues"
+  },
+  "main": "dist/index.js",
+  "module": "dist/index.es.js",
+  "typings": "index.d.ts",
+  "files": [
+    "dist",
+    "index.d.ts"
+  ],
+  "engines": {
+    "node": ">= 8"
+  },
+  "scripts": {
+    "prepare": "npm run build",
+    "build": "rollup -c",
+    "lint": "npm run lint:js && npm run lint:ts",
+    "lint:js": "eslint --fix src test util",
+    "lint:ts": "tslint --fix -t stylish '*.ts' 'test/*.ts'",
+    "test": "nyc ava",
+    "pretest": "tsc index.d.ts test/types.ts --noEmit",
+    "posttest": "npm run lint"
+  },
+  "ava": {
+    "files": [
+      "!**/fixtures/**",
+      "!**/helpers/**",
+      "!**/recipes/**",
+      "!**/types.ts",
+      "!**/util/**"
+    ]
+  },
+  "nyc": {
+    "exclude": [
+      "test/**",
+      "util/**"
+    ],
+    "reporter": [
+      "lcov",
+      "text"
+    ]
+  },
+  "dependencies": {
+    "@prantlf/jsonlint": "10.2.0",
+    "rollup-pluginutils": "2.8.2"
+  },
+  "devDependencies": {
+    "ava": "2.4.0",
+    "eslint": "6.8.0",
+    "eslint-config-standard": "14.1.0",
+    "eslint-plugin-import": "2.19.1",
+    "eslint-plugin-node": "11.0.0",
+    "eslint-plugin-promise": "4.2.1",
+    "eslint-plugin-standard": "4.0.1",
+    "nyc": "15.0.0",
+    "rollup": "1.27.14",
+    "rollup-plugin-buble": "0.19.8",
+    "rollup-plugin-node-resolve": "5.2.0",
+    "source-map-support": "0.5.16",
+    "tslint": "5.20.1",
+    "tslint-config-standard": "9.0.0",
+    "typescript": "3.7.4"
+  },
+  "peerDependencies": {
+    "rollup": "1.27.14"
+  },
+  "keywords": [
+    "rollup",
+    "plugin",
+    "rollup-plugin",
+    "json",
+    "jsonlint",
+    "es2015",
+    "npm",
+    "modules"
+  ]
+}
