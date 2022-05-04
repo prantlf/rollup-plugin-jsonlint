@@ -1,11 +1,9 @@
 # rollup-plugin-jsonlint
 
-[![NPM version](https://badge.fury.io/js/rollup-plugin-jsonlint.svg)](https://badge.fury.io/js/rollup-plugin-jsonlint)
-[![Build Status](https://travis-ci.com/prantlf/rollup-plugin-jsonlint.svg?branch=master)](https://travis-ci.com/prantlf/rollup-plugin-jsonlint)
-[![codecov](https://codecov.io/gh/prantlf/rollup-plugin-jsonlint/branch/master/graph/badge.svg)](https://codecov.io/gh/prantlf/rollup-plugin-jsonlint)
-[![Dependency Status](https://david-dm.org/prantlf/rollup-plugin-jsonlint.svg)](https://david-dm.org/prantlf/rollup-plugin-jsonlint)
-[![devDependency Status](https://david-dm.org/prantlf/rollup-plugin-jsonlint/dev-status.svg)](https://david-dm.org/prantlf/rollup-plugin-jsonlint#info=devDependencies)
-[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![Latest version](https://img.shields.io/npm/v/rollup-plugin-jsonlint)
+ ![Dependency status](https://img.shields.io/librariesio/release/npm/rollup-plugin-jsonlint)
+](https://www.npmjs.com/package/rollup-plugin-jsonlint)
+[![Code coverage](https://codecov.io/gh/prantlf/rollup-plugin-jsonlint/branch/master/graph/badge.svg)](https://codecov.io/gh/prantlf/rollup-plugin-jsonlint)
 
 A [Rollup] plugin which converts `.json` files to ES6 modules. Recognizes standard [JSON], CJSON (JSON with comments) and [JSON5] (further more flexible JSON).
 

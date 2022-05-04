@@ -1,6 +1,6 @@
 {
   "name": "rollup-plugin-jsonlint",
-  "version": "0.0.0-development",
+  "version": "0.0.1",
   "description": "Converts .json (JSON/CJSON/JSON5) files to ES6 modules.",
   "author": "Ferdinand Prantl <prantlf@gmail.com> (http://prantl.tk)",
   "license": "MIT",
@@ -33,8 +33,8 @@
     "build": "rollup -c",
     "lint": "npm run lint:js && npm run lint:ts",
     "lint:js": "eslint --fix src test util",
-    "lint:ts": "tslint --fix -t stylish '*.ts' 'test/*.ts'",
-    "test": "nyc ava",
+    "lint:ts": "eslint -c .tslintrc.yml --fix '*.ts' 'test/*.ts'",
+    "test": "c8 ava --no-worker-threads",
     "pretest": "tsc index.d.ts test/types.ts --noEmit",
     "posttest": "npm run lint"
   },
@@ -47,7 +47,7 @@
       "!**/util/**"
     ]
   },
-  "nyc": {
+  "c8": {
     "exclude": [
       "test/**",
       "util/**"
@@ -58,28 +58,30 @@
     ]
   },
   "dependencies": {
-    "@prantlf/jsonlint": "10.2.0",
+    "@prantlf/jsonlint": "11.6.0",
     "rollup-pluginutils": "2.8.2"
   },
   "devDependencies": {
-    "ava": "2.4.0",
-    "eslint": "6.8.0",
-    "eslint-config-standard": "14.1.0",
-    "eslint-plugin-import": "2.19.1",
-    "eslint-plugin-node": "11.0.0",
-    "eslint-plugin-promise": "4.2.1",
-    "eslint-plugin-standard": "4.0.1",
-    "nyc": "15.0.0",
-    "rollup": "1.27.14",
+    "@types/node": "17.0.31",
+    "@typescript-eslint/eslint-plugin": "5.22.0",
+    "@typescript-eslint/parser": "5.22.0",
+    "ava": "4.2.0",
+    "c8": "7.11.2",
+    "eslint": "8.14.0",
+    "eslint-config-standard": "17.0.0",
+    "eslint-plugin-import": "2.26.0",
+    "eslint-plugin-n": "15.2.0",
+    "eslint-plugin-node": "11.1.0",
+    "eslint-plugin-promise": "6.0.0",
+    "eslint-plugin-standard": "4.1.0",
+    "rollup": "2.71.1",
     "rollup-plugin-buble": "0.19.8",
     "rollup-plugin-node-resolve": "5.2.0",
-    "source-map-support": "0.5.16",
-    "tslint": "5.20.1",
-    "tslint-config-standard": "9.0.0",
-    "typescript": "3.7.4"
+    "source-map-support": "0.5.21",
+    "typescript": "4.6.4"
   },
   "peerDependencies": {
-    "rollup": "1.27.14"
+    "rollup": "2.71.1"
   },
   "keywords": [
     "rollup",

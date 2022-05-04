@@ -3,5 +3,9 @@
     "**/.git": true,
     "**/.DS_Store": true,
     "**/dist": true
+  },
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/coverage": true
   }
 }
