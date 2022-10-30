@@ -7,11 +7,11 @@
 
 A [Rollup] plugin which converts `.json` files to ES6 modules. Recognizes standard [JSON], CJSON (JSON with comments) and [JSON5] (further more flexible JSON).
 
-This plugin is based on [`@rollup/plugin-json`]. It supports all original options. It leverages the parser from [`@prantlf/jsonlint`] to provide better error information in case or invalid input and to parse JSON extensions like CJSON and JSON5. If no extension is enabled, the standard `JSON.parse` will be used for the best performance.
+This plugin started as an overwrite of [`@rollup/plugin-json`]. It supports all the original options. It leverages the parser from [`@prantlf/jsonlint`] to provide better error information in case or invalid input and to parse JSON extensions like CJSON and JSON5. If no extension is enabled, the standard `JSON.parse` will be used for the best performance.
 
 ## Requirements
 
-This plugin requires [Node.js] [LTS] (currently 12, at least 8) and Rollup 1.20 or newer.
+This plugin requires [Node.js] [LTS] (currently 18, at least 14.8) and Rollup 1.20 or newer.
 
 ## Installation
 
@@ -59,6 +59,13 @@ A shortcut for setting the three boolean flags below.
 * `json` - expects the standard JSON (uses defaults)
 * `cjson` - expects CJSON (sets `ignoreComments` to `true`)
 * `json5` - expects JSON5 (sets `ignoreComments`, `ignoreTrailingCommas` and `allowSingleQuotedStrings` to `true`)
+
+### `ignoreBOM`
+
+Type: `Boolean`<br>
+Default: `false`
+
+If `true`, the leading UTF-8 byte-order mark will be ignored.
 
 ### `ignoreComments`
 

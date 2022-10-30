@@ -20,11 +20,11 @@ jobs:
       with:
         version: '>=6'
         run_install: |
-          - args: [--frozen-lockfile, --no-verify-store-integrity, --no-optional]
+          - args: [--frozen-lockfile, --no-verify-store-integrity]
     - name: Test
       run: npm test
     - name: Coverage
-      run: pnpx codecov --disable=gcov
+      uses: codecov/codecov-action@v2
     - name: Publish
       uses: cycjimmy/semantic-release-action@v2
       with:

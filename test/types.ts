@@ -1,25 +1,27 @@
-// @ts-check
-import jsonlint, { RollupJsonLintOptions } from '..'
+import jsonlint from 'rollup-plugin-jsonlint'
 
-const options: RollupJsonLintOptions = {
-  include: 'node_modules/**',
-  exclude: ['node_modules/foo/**', 'node_modules/bar/**'],
-  preferConst: true,
-  indent: '  ',
-  compact: true,
-  namedExports: true
-}
+declare type testCallback = () => void
+declare function test (label: string, callback: testCallback): void
 
-/** @type {import("rollup").RollupOptions} */
-const config = {
-  input: 'main.js',
-  output: {
-    file: 'bundle.js',
-    format: 'iife'
-  },
-  plugins: [
-    jsonlint(options)
-  ]
-}
-
-export default config
+test('Type declarations for TypeScript', () => {
+  jsonlint()
+  jsonlint({})
+  jsonlint({ include: [] })
+  jsonlint({ include: [''] })
+  jsonlint({ include: '' })
+  jsonlint({ include: /a/ })
+  jsonlint({ exclude: [] })
+  jsonlint({ exclude: [''] })
+  jsonlint({ exclude: '' })
+  jsonlint({ exclude: /a/ })
+  jsonlint({ preferConst: true })
+  jsonlint({ indent: '  ' })
+  jsonlint({ compact: true })
+  jsonlint({ namedExports: true })
+  jsonlint({ mode: 'json5' })
+  jsonlint({ ignoreBOM: true })
+  jsonlint({ ignoreComments: true })
+  jsonlint({ ignoreTrailingCommas: true })
+  jsonlint({ allowSingleQuotedStrings: true })
+  jsonlint({ allowDuplicateObjectKeys: true })
+})

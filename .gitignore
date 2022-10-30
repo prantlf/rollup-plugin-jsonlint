@@ -1,5 +1,6 @@
 .DS_Store
-.eslintcache
+*.log
+*.map
 coverage
-dist
+/lib/index.cjs
 node_modules
