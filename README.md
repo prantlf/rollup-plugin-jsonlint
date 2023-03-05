@@ -143,7 +143,7 @@ If `true`, instructs the plugin to declare properties as variables, using either
 
 ## License
 
-Copyright (C) 2019-2022 Ferdinand Prantl
+Copyright (C) 2019-2023 Ferdinand Prantl
 
 Licensed under the [MIT License].
 
