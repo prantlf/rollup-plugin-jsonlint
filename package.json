@@ -1,6 +1,6 @@
 {
   "name": "rollup-plugin-jsonlint",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Converts .json (JSON/CJSON/JSON5) files to ES6 modules.",
   "author": "Ferdinand Prantl <prantlf@gmail.com> (http://prantl.tk)",
   "license": "MIT",
