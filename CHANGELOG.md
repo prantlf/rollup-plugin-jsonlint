@@ -1,3 +1,10 @@
+## [2.0.2](https://github.com/prantlf/rollup-plugin-jsonlint/compare/v2.0.1...v2.0.2) (2023-10-08)
+
+
+### Bug Fixes
+
+* Upgrade dependencies, support Rollup 4 ([fb22dce](https://github.com/prantlf/rollup-plugin-jsonlint/commit/fb22dce45679c8960166dadbfbb2032777586e7d))
+
 ## [2.0.1](https://github.com/prantlf/rollup-plugin-jsonlint/compare/v2.0.0...v2.0.1) (2023-04-27)
 
 
