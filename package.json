@@ -80,19 +80,19 @@
   "devDependencies": {
     "@semantic-release/changelog": "6.0.3",
     "@semantic-release/git": "10.0.1",
-    "@types/node": "18.16.1",
-    "c8": "7.13.0",
-    "denolint": "^2.0.9",
-    "rollup": "3.21.0",
+    "@types/node": "20.8.3",
+    "c8": "8.0.1",
+    "denolint": "^2.0.12",
+    "rollup": "4.0.2",
     "rollup-plugin-jsonlint": "link:",
     "rollup-plugin-node-resolve": "^5.2.0",
     "tehanu": "^1.0.1",
     "tehanu-repo-coco": "^1.0.0",
     "tehanu-teru": "^1.0.0",
-    "typescript": "5.0.4"
+    "typescript": "5.2.2"
   },
   "peerDependencies": {
-    "rollup": "^1.20 || ^2 || ^3"
+    "rollup": "^1.20 || ^2 || ^3 || ^4"
   },
   "keywords": [
     "rollup",
